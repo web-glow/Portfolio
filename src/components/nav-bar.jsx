@@ -26,7 +26,7 @@ const NavBar = () => {
             py={2}
             px={{ base: "6%", md: "18%" }}
         >
-            <Heading fontSize={{ base: "18px", md: "27px", lg: "40px" }}>
+            <Heading fontSize={{ base: "18px", md: "27px", lg: "20px" }}>
                 Jay Sehmbey
             </Heading>
 

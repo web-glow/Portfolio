@@ -22,12 +22,12 @@ import { OrbitControls } from "@react-three/drei";
 import { Suspense } from "react";
 
 const HomePage = ({ history }) => {
-    const bg = useColorModeValue("teal.500", "teal.200");
+    const bg = useColorModeValue("gray.500", "gray.300");
     const bw = useColorModeValue("blackAlpha.600", "white");
 
     return (
         <Center>
-            <VStack w="full" px="10%" minW="400" maxW="1200" mt="4%">
+            <VStack w="full" px="10%" minW="400" maxW="1050" mt="4%">
                 <Box>
                     <Canvas
                         style={{
@@ -93,8 +93,8 @@ const HomePage = ({ history }) => {
                 </Box>
                 <Box w="full">
                     <Heading variant="section-header">History</Heading>
-                    {history.map((item) => (
-                        <Text>
+                    {history.map((item, index) => (
+                        <Text key={index}>
                             {" "}
                             {item.year} | {item.description}{" "}
                         </Text>
