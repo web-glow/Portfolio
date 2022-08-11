@@ -11,6 +11,12 @@ const styles = {
         body: {
             bg: mode("#f0e7db", "#202023")(props),
         },
+        transition: {
+            custom: {
+                duration: "0.5s",
+                easing: "ease-in-out",
+            },
+        },
     }),
 };
 

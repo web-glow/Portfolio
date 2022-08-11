@@ -8,11 +8,12 @@ import {
     Button,
     Container,
     Heading,
-    Link,
 } from "@chakra-ui/react";
 import ThemeToggleButton from "./theme-toggle-button";
+import { Link } from "react-router-dom";
+
 const NavBar = () => {
-    const activeColor = useColorModeValue("teal.500", "teal.200");
+    const activeColor = useColorModeValue("purple.500", "orange.200");
 
     return (
         <Box
@@ -30,24 +31,21 @@ const NavBar = () => {
                 Jay Sehmbey
             </Heading>
 
-            <HStack pl={5} display={{ base: "none", md: "flex" }}>
+            <Spacer />
+            <HStack pr={5} display={{ base: "none", md: "flex" }}>
                 <Button
                     variant="ghost"
                     _active={{ bg: activeColor, color: "black" }}
-                    isActive={true}
                 >
-                    Home
+                    About
                 </Button>
                 <Button
-                    colorScheme="teal"
                     variant="ghost"
                     _active={{ bg: activeColor, color: "black" }}
                 >
                     Projects
                 </Button>
             </HStack>
-
-            <Spacer />
 
             <ThemeToggleButton />
 
