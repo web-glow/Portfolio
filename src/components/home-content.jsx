@@ -5,8 +5,10 @@ import {
     Box,
     Center,
     Heading,
+    HStack,
     Image,
     Link,
+    Spacer,
     Text,
     useColorModeValue,
     VStack,
@@ -15,11 +17,22 @@ import RetroComputer from "./retro-computer";
 
 const HomeContent = ({ history }) => {
     const bg = useColorModeValue("purple.500", "orange.500");
-    const bw = useColorModeValue("blackAlpha.600", "white");
+    const bw = useColorModeValue("blackAlpha.600", "blackAlpha.600");
+    const btags = useColorModeValue("purple.500", "orange.100");
+
+    const project1 = ["React", "JavaScript", "CSS", "REST API", "NodeJS"];
+    const project2 = [
+        "React",
+        "JavaScript",
+        "CSS",
+        "REST API",
+        "SQL",
+        "NodeJS",
+    ];
 
     return (
         <Center>
-            <VStack w="full" px="10%" minW="500" maxW="1050" mt="4%">
+            <VStack w="full" px="10%" minW="500" maxW="1090" mt="4%">
                 <motion.div
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
@@ -117,6 +130,7 @@ const HomeContent = ({ history }) => {
                         </motion.div>
                     </motion.div>
                 </Box>
+
                 <Box w="full">
                     <motion.div
                         initial={{ opacity: 0 }}
@@ -128,10 +142,12 @@ const HomeContent = ({ history }) => {
                         <motion.div whileHover={{ scale: 1.2 }}>
                             <Heading variant="section-header">History</Heading>
                             {history.map((item, index) => (
-                                <Text key={index}>
-                                    {" "}
-                                    {item.year} | {item.description}{" "}
-                                </Text>
+                                <HStack>
+                                    <Text key={index} pr={1} fontWeight="bold">
+                                        {item.year}
+                                    </Text>
+                                    <Text key={index}>{item.description} </Text>
+                                </HStack>
                             ))}
                         </motion.div>
                     </motion.div>
@@ -147,10 +163,81 @@ const HomeContent = ({ history }) => {
                         <motion.div whileHover={{ scale: 1.2 }}>
                             <Heading variant="section-header">Projects</Heading>
 
-                            <Text></Text>
+                            <HStack>
+                                <Image
+                                    src="./portal-image.png"
+                                    maxW="400"
+                                    borderRadius="lg"
+                                />
+                                <VStack>
+                                    <Heading fontSize={18} pt="5" pb="3">
+                                        Stock Market Portal App
+                                    </Heading>
+                                    <Text flex="1" textAlign="center">
+                                        A client-side web-app which allows users
+                                        to search from NASDAQ 100 stock list and
+                                        view more information about the stock
+                                        using APIs, charts, and tables.
+                                    </Text>
+                                </VStack>
+                            </HStack>
+                            <HStack p={3}>
+                                {project1.map((item, index) => (
+                                    <Heading
+                                        key={index}
+                                        fontSize={16}
+                                        bg={btags}
+                                        py={1.8}
+                                        px={3}
+                                        borderRadius="4"
+                                        color="black"
+                                    >
+                                        {item}
+                                    </Heading>
+                                ))}
+                            </HStack>
                         </motion.div>
                     </motion.div>
+
+                    <motion.div whileHover={{ scale: 1.2 }}>
+                        <HStack pt={7}>
+                            <VStack>
+                                <Heading fontSize={18} pt="5" pb="3">
+                                    Employee Management System
+                                </Heading>
+                                <Text flex="1" textAlign="center">
+                                    A proof-of-concept full stack web-app for a
+                                    client C-RES in a university course.
+                                    Features included employee recruitment and
+                                    onboarding process, leave management,
+                                    processing payroll, announcements, emp vs
+                                    manager vs admin access controls.
+                                </Text>
+                            </VStack>
+                            <Image
+                                src="./cres.png"
+                                maxW="400"
+                                borderRadius="lg"
+                            />
+                        </HStack>
+                        <HStack p={3} flex={1} justifyContent="flex-end">
+                            {project2.map((item, index) => (
+                                <Heading
+                                    key={index}
+                                    fontSize={16}
+                                    bg={btags}
+                                    py={1.8}
+                                    px={3}
+                                    borderRadius="4"
+                                    color="black"
+                                >
+                                    {item}
+                                </Heading>
+                            ))}
+                        </HStack>
+                    </motion.div>
                 </Box>
+
                 <Box w="full">
                     <motion.div
                         initial={{ opacity: 0 }}

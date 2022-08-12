@@ -6,12 +6,22 @@ import HomeContent from "../components/home-content";
 const Home = () => {
     const history = [
         {
-            year: "1999 - 2000",
-            description: "Born baby",
+            year: "1999",
+            description: "Born in Chandigarh, India",
         },
         {
-            year: "2000 - 2022",
-            description: "khali deemag",
+            year: "2017",
+            description: "Finished Secondary School.",
+        },
+        {
+            year: "2017 - 2020",
+            description:
+                "Bachelor of Information Technology - University of Queensland, Australia.",
+        },
+        {
+            year: "2020 - 2022",
+            description:
+                "Master of Information Technology - Queensland University of Technology, Australia.",
         },
     ];
     return (
