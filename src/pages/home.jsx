@@ -23,6 +23,11 @@ const Home = () => {
             description:
                 "Master of Information Technology - Queensland University of Technology, Australia.",
         },
+        {
+            year: "2021 - 2022",
+            description:
+                "Web Developer Internship - The Brisbane Dialogues, Brisbane.",
+        },
     ];
     return (
         <VStack spacing={4} align="stretch" display="flex">

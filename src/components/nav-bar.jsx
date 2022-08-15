@@ -1,16 +1,15 @@
+import { DownloadIcon } from "@chakra-ui/icons";
 import {
     Box,
-    Flex,
+    Button,
+    Heading,
+    Link,
+    Spacer,
     Text,
     useColorModeValue,
-    Spacer,
-    HStack,
-    Button,
-    Container,
-    Heading,
+    Wrap,
 } from "@chakra-ui/react";
 import ThemeToggleButton from "./theme-toggle-button";
-import { Link } from "react-router-dom";
 
 const NavBar = () => {
     const activeColor = useColorModeValue("purple.500", "orange.200");
@@ -32,24 +31,51 @@ const NavBar = () => {
             </Heading>
 
             <Spacer />
-            <HStack pr={5} display={{ base: "none", md: "flex" }}>
-                <Button
-                    variant="ghost"
-                    _active={{ bg: activeColor, color: "black" }}
+            <Wrap pr={5}>
+                <Link href={"#about"} textDecoration="none">
+                    <Button
+                        display={{ base: "none", md: "flex" }}
+                        variant="ghost"
+                        _active={{ bg: activeColor, color: "black" }}
+                    >
+                        About
+                    </Button>
+                </Link>
+                <Link href={"#projects"} textDecoration="none">
+                    <Button
+                        display={{ base: "none", md: "flex" }}
+                        variant="ghost"
+                        _active={{ bg: activeColor, color: "black" }}
+                    >
+                        Projects
+                    </Button>
+                </Link>
+                <Link href={"#contacts"} textDecoration="none">
+                    <Button
+                        display={{ base: "none", md: "flex" }}
+                        variant="ghost"
+                        _active={{ bg: activeColor, color: "black" }}
+                    >
+                        Contact
+                    </Button>
+                </Link>
+                <Link
+                    href={"./Jaskaran-resume.pdf"}
+                    target="_blank"
+                    textDecoration="none"
                 >
-                    About
-                </Button>
-                <Button
-                    variant="ghost"
-                    _active={{ bg: activeColor, color: "black" }}
-                >
-                    Projects
-                </Button>
-            </HStack>
+                    <Button
+                        variant="solid"
+                        colorScheme="teal"
+                        _active={{ bg: activeColor, color: "black" }}
+                    >
+                        <DownloadIcon />
+                        <Text>{"Resumé"}</Text>
+                    </Button>
+                </Link>
+            </Wrap>
 
             <ThemeToggleButton />
-
-            <Box display={{ md: "none" }}>noaihs</Box>
         </Box>
     );
 };

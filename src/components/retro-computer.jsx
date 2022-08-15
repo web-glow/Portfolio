@@ -8,7 +8,7 @@ const RetroComputer = () => {
         <Canvas
             style={{
                 height: "470px",
-                width: "500px",
+                width: "370px",
             }}
         >
             <OrbitControls enableZoom={false} />
