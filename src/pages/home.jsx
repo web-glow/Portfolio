@@ -1,6 +1,7 @@
 import { VStack } from "@chakra-ui/react";
 import NavBar from "../components/nav-bar";
 import HomeContent from "../components/home-content";
+import Footer from "../components/footer";
 //personal info
 
 const Home = () => {
@@ -33,6 +34,7 @@ const Home = () => {
         <VStack spacing={4} align="stretch" display="flex">
             <NavBar />
             <HomeContent history={history} />
+            <Footer />
         </VStack>
     );
 };

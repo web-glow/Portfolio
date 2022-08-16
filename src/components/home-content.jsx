@@ -17,6 +17,7 @@ import { motion } from "framer-motion";
 import { BsLinkedin, BsYoutube } from "react-icons/bs";
 import { CgWebsite } from "react-icons/cg";
 import { GoMarkGithub } from "react-icons/go";
+import { EmailIcon, PhoneIcon } from "@chakra-ui/icons";
 
 import RetroComputer from "./retro-computer";
 
@@ -80,7 +81,12 @@ const HomeContent = ({ history }) => {
                     </motion.div>
                 </motion.div>
 
-                <Wrap w="full" justifyContent="space-between">
+                <HStack
+                    w="full"
+                    flex={1}
+                    justifyContent="space-between"
+                    flexWrap="wrap"
+                >
                     <Box>
                         <motion.div
                             initial={{ opacity: 0 }}
@@ -97,7 +103,6 @@ const HomeContent = ({ history }) => {
                             </motion.div>
                         </motion.div>
                     </Box>
-                    <Spacer />
                     <motion.div
                         initial={{ opacity: 0, scale: 0.5 }}
                         animate={{ opacity: 1, scale: 1 }}
@@ -121,7 +126,7 @@ const HomeContent = ({ history }) => {
                             />
                         </motion.div>
                     </motion.div>
-                </Wrap>
+                </HStack>
                 <Box w="full" py={4}>
                     <motion.div
                         initial={{ opacity: 0 }}
@@ -135,9 +140,10 @@ const HomeContent = ({ history }) => {
                             <Text>
                                 Jay is a young passionate IT post-grad who loves
                                 programming and designing. He is aspiring to be
-                                a software developer and loves to research, plan
-                                and execute solutions to various problems with
-                                good coding and design practices.
+                                a software developer and loves to research
+                                specifications, plan the project, build, and
+                                test solutions to various problems with good
+                                coding and design practices.
                             </Text>
                         </motion.div>
                     </motion.div>
@@ -252,7 +258,7 @@ const HomeContent = ({ history }) => {
                     </motion.div>
 
                     <motion.div whileHover={{ scale: 1.2 }}>
-                        <Wrap pt={4} justifyContent="space-between">
+                        <Wrap pt={14} justifyContent="space-between">
                             <WrapItem w="60" flex={1} justifyContent="center">
                                 <VStack>
                                     <Heading fontSize={18} pt="5" pb="3">
@@ -329,7 +335,7 @@ const HomeContent = ({ history }) => {
                     >
                         <motion.div whileHover={{ scale: 1.2 }}>
                             <Wrap
-                                pt={4}
+                                pt={14}
                                 justifyContent="space-between"
                                 alignItems="center"
                             >
@@ -413,7 +419,7 @@ const HomeContent = ({ history }) => {
                     </motion.div>
                 </Box>
 
-                <Box id="contacts" w="full">
+                <Box w="full" pt={3}>
                     <motion.div
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
@@ -464,6 +470,42 @@ const HomeContent = ({ history }) => {
                                     >
                                         <Text fontWeight="Bold" fontSize="20">
                                             {"@Jaskaran (Jay) Singh Sehmbey"}
+                                        </Text>
+                                    </Link>
+                                </HStack>
+                            </Box>
+                        </motion.div>
+                    </motion.div>
+                </Box>
+                <Box id="contacts" w="full" pt={3}>
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{
+                            duration: 2,
+                        }}
+                    >
+                        <motion.div whileHover={{ scale: 1.2 }}>
+                            <Heading variant="section-header">Contact</Heading>
+
+                            <Box>
+                                <HStack px={5} py={2}>
+                                    <EmailIcon w={6} h={6} />
+                                    <Link
+                                        color={bg}
+                                        href={`mailto:${"jaskaransinghsehmbey@hotmail.com"}`}
+                                        target="_blank"
+                                    >
+                                        <Text fontWeight="Bold" fontSize="20">
+                                            {"jaskaransinghsehmbey@hotmail.com"}
+                                        </Text>
+                                    </Link>
+                                </HStack>
+                                <HStack px={5} py={2}>
+                                    <PhoneIcon w={6} h={6} />
+                                    <Link color={bg} target="_blank">
+                                        <Text fontWeight="Bold" fontSize="20">
+                                            {"+61 0432 790 019"}
                                         </Text>
                                     </Link>
                                 </HStack>
