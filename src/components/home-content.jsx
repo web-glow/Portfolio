@@ -193,7 +193,7 @@ const HomeContent = ({ history }) => {
                                 <WrapItem>
                                     <Image
                                         src="./portal-image.png"
-                                        maxW={{ base: "350", lg: "400" }}
+                                        maxW={{ base: "330", lg: "400" }}
                                         borderRadius="lg"
                                     />
                                 </WrapItem>
@@ -278,7 +278,7 @@ const HomeContent = ({ history }) => {
                             <WrapItem>
                                 <Image
                                     src="./cres.png"
-                                    maxW={{ base: "350", lg: "400" }}
+                                    maxW={{ base: "330", lg: "400" }}
                                     borderRadius="lg"
                                 />
                             </WrapItem>
@@ -342,7 +342,7 @@ const HomeContent = ({ history }) => {
                                 <WrapItem>
                                     <Image
                                         src="./qt.png"
-                                        maxW={{ base: "350", lg: "400" }}
+                                        maxW={{ base: "330", lg: "400" }}
                                         borderRadius="lg"
                                         mt={3}
                                     />
@@ -496,7 +496,14 @@ const HomeContent = ({ history }) => {
                                         href={`mailto:${"jaskaransinghsehmbey@hotmail.com"}`}
                                         target="_blank"
                                     >
-                                        <Text fontWeight="Bold" fontSize="20">
+                                        <Text
+                                            fontWeight="Bold"
+                                            fontSize={{
+                                                base: "16",
+                                                md: "15",
+                                                lg: "20",
+                                            }}
+                                        >
                                             {"jaskaransinghsehmbey@hotmail.com"}
                                         </Text>
                                     </Link>
